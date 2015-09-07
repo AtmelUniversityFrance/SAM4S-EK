@@ -3,6 +3,10 @@
 *.obj
 *.elf
 *.d
+*.lss
+*.mk
+Makefile
+*.map
 
 # Precompiled Headers
 *.gch
