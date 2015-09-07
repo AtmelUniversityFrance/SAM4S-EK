@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>6.2</ProjectVersion>
+    <ToolchainName>com.Atmel.ARMGCC.C</ToolchainName>
+    <ProjectGuid>{72372197-a450-43e7-9888-f1e9bd2537b4}</ProjectGuid>
+    <avrdevice>ATSAM4S16C</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>C</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>ex6_serial_print</AssemblyName>
+    <Name>ex6_serial_print</Name>
+    <RootNamespace>ex6_serial_print</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <UncachedRange />
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <BootSegment>2</BootSegment>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <AsfFrameworkConfig>
+      <framework-data>
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.21.0" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+    <avrtool>com.atmel.avrdbg.tool.samice</avrtool>
+    <avrtoolinterface>JTAG</avrtoolinterface>
+    <UseGdb>True</UseGdb>
+    <preserveEEPROM>true</preserveEEPROM>
+    <AAFDebugger>
+      <AAFDebugFiles>
+        <DebugFile>
+          <path>\Debug\ex6_serial_print.lss</path>
+          <AAFSetting>
+            <Label>Lss Files</Label>
+            <Extention>.lss</Extention>
+            <Regex>^\s*(?&lt;address&gt;[a-f0-9]*):\s*.*$</Regex>
+            <DebugEnabled>true</DebugEnabled>
+            <RegexGroups>address</RegexGroups>
+            <DebuggerExpression>$pc</DebuggerExpression>
+          </AAFSetting>
+        </DebugFile>
+      </AAFDebugFiles>
+    </AAFDebugger>
+    <com_atmel_avrdbg_tool_edbg>
+      <ToolOptions>
+        <InterfaceProperties>
+          <SwdClock>2000000</SwdClock>
+        </InterfaceProperties>
+        <InterfaceName>SWD</InterfaceName>
+      </ToolOptions>
+      <ToolType>com.atmel.avrdbg.tool.edbg</ToolType>
+      <ToolNumber>ATML2081030200001667</ToolNumber>
+      <ToolName>EDBG</ToolName>
+    </com_atmel_avrdbg_tool_edbg>
+    <com_atmel_avrdbg_tool_samice>
+      <ToolOptions>
+        <InterfaceProperties>
+        </InterfaceProperties>
+        <InterfaceName>JTAG</InterfaceName>
+      </ToolOptions>
+      <ToolType>com.atmel.avrdbg.tool.samice</ToolType>
+      <ToolNumber>28005872</ToolNumber>
+      <ToolName>SAM-ICE</ToolName>
+    </com_atmel_avrdbg_tool_samice>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <ArmGcc>
+  <armgcc.common.outputfiles.hex>True</armgcc.common.outputfiles.hex>
+  <armgcc.common.outputfiles.lss>True</armgcc.common.outputfiles.lss>
+  <armgcc.common.outputfiles.eep>True</armgcc.common.outputfiles.eep>
+  <armgcc.common.outputfiles.bin>True</armgcc.common.outputfiles.bin>
+  <armgcc.common.outputfiles.srec>True</armgcc.common.outputfiles.srec>
+  <armgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>NDEBUG</Value>
+    </ListValues>
+  </armgcc.compiler.symbols.DefSymbols>
+  <armgcc.compiler.directories.DefaultIncludePath>False</armgcc.compiler.directories.DefaultIncludePath>
+  <armgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>../../CMSIS/CMSIS_API/Include</Value>
+      <Value>../../CMSIS/CMSIS_Devices/ATMEL</Value>
+    </ListValues>
+  </armgcc.compiler.directories.IncludePaths>
+  <armgcc.compiler.optimization.level>Optimize for size (-Os)</armgcc.compiler.optimization.level>
+  <armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+  <armgcc.compiler.optimization.PrepareDataForGarbageCollection>True</armgcc.compiler.optimization.PrepareDataForGarbageCollection>
+  <armgcc.compiler.warnings.AllWarnings>True</armgcc.compiler.warnings.AllWarnings>
+  <armgcc.compiler.miscellaneous.Verbose>True</armgcc.compiler.miscellaneous.Verbose>
+  <armgcc.linker.general.UseNewlibNano>True</armgcc.linker.general.UseNewlibNano>
+  <armgcc.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </armgcc.linker.libraries.Libraries>
+  <armgcc.linker.libraries.LibrarySearchPaths>
+    <ListValues>
+      <Value>..</Value>
+    </ListValues>
+  </armgcc.linker.libraries.LibrarySearchPaths>
+  <armgcc.linker.optimization.GarbageCollectUnusedSections>True</armgcc.linker.optimization.GarbageCollectUnusedSections>
+  <armgcc.linker.memorysettings.ExternalRAM>False</armgcc.linker.memorysettings.ExternalRAM>
+  <armgcc.linker.miscellaneous.LinkerFlags>-Tatmel_sam4s_xplained.ld</armgcc.linker.miscellaneous.LinkerFlags>
+  <armgcc.preprocessingassembler.general.IncludePaths>
+    <ListValues>
+      <Value>../../CMSIS/CMSIS_API/Include</Value>
+      <Value>../../CMSIS/CMSIS_Devices/ATMEL</Value>
+      <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\Device\ATMEL\sam4s\include</Value>
+      <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel</Value>
+      <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\CMSIS\Include</Value>
+      <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\Device\ATMEL</Value>
+    </ListValues>
+  </armgcc.preprocessingassembler.general.IncludePaths>
+</ArmGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <ArmGcc>
+  <armgcc.common.outputfiles.hex>True</armgcc.common.outputfiles.hex>
+  <armgcc.common.outputfiles.lss>True</armgcc.common.outputfiles.lss>
+  <armgcc.common.outputfiles.eep>False</armgcc.common.outputfiles.eep>
+  <armgcc.common.outputfiles.bin>True</armgcc.common.outputfiles.bin>
+  <armgcc.common.outputfiles.srec>False</armgcc.common.outputfiles.srec>
+  <armgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</armgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <armgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>DEBUG</Value>
+    </ListValues>
+  </armgcc.compiler.symbols.DefSymbols>
+  <armgcc.compiler.directories.DefaultIncludePath>False</armgcc.compiler.directories.DefaultIncludePath>
+  <armgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>../../CMSIS/CMSIS_API/Include</Value>
+      <Value>../../CMSIS/CMSIS_Devices/ATMEL</Value>
+    </ListValues>
+  </armgcc.compiler.directories.IncludePaths>
+  <armgcc.compiler.optimization.level>Optimize (-O1)</armgcc.compiler.optimization.level>
+  <armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+  <armgcc.compiler.optimization.PrepareDataForGarbageCollection>True</armgcc.compiler.optimization.PrepareDataForGarbageCollection>
+  <armgcc.compiler.optimization.DebugLevel>Maximum (-g3)</armgcc.compiler.optimization.DebugLevel>
+  <armgcc.compiler.warnings.AllWarnings>True</armgcc.compiler.warnings.AllWarnings>
+  <armgcc.compiler.miscellaneous.Verbose>True</armgcc.compiler.miscellaneous.Verbose>
+  <armgcc.linker.general.UseNewlibNano>True</armgcc.linker.general.UseNewlibNano>
+  <armgcc.linker.general.AdditionalSpecs>Use syscall stubs (--specs=nosys.specs)</armgcc.linker.general.AdditionalSpecs>
+  <armgcc.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </armgcc.linker.libraries.Libraries>
+  <armgcc.linker.libraries.LibrarySearchPaths>
+    <ListValues>
+      <Value>../../resources/linker_scripts/gcc</Value>
+    </ListValues>
+  </armgcc.linker.libraries.LibrarySearchPaths>
+  <armgcc.linker.optimization.GarbageCollectUnusedSections>True</armgcc.linker.optimization.GarbageCollectUnusedSections>
+  <armgcc.linker.memorysettings.ExternalRAM />
+  <armgcc.linker.miscellaneous.LinkerFlags>-Tatmel_sam4s_ek.ld</armgcc.linker.miscellaneous.LinkerFlags>
+  <armgcc.assembler.debugging.DebugLevel>Default (-g)</armgcc.assembler.debugging.DebugLevel>
+  <armgcc.preprocessingassembler.general.IncludePaths>
+    <ListValues>
+      <Value>../../CMSIS/CMSIS_API/Include</Value>
+      <Value>../../CMSIS/CMSIS_Devices/ATMEL</Value>
+      <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\Device\ATMEL\sam4s\include</Value>
+      <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel</Value>
+      <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\CMSIS\Include</Value>
+      <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\Device\ATMEL</Value>
+    </ListValues>
+  </armgcc.preprocessingassembler.general.IncludePaths>
+  <armgcc.preprocessingassembler.debugging.DebugLevel>Default (-Wa,-g)</armgcc.preprocessingassembler.debugging.DebugLevel>
+</ArmGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\CMSIS\CMSIS_Devices\ATMEL\sam.h">
+      <SubType>compile</SubType>
+      <Link>device headers\sam.h</Link>
+    </Compile>
+    <Compile Include="..\CMSIS\CMSIS_Devices\ATMEL\sam4s\include\component\acc.h">
+      <SubType>compile</SubType>
+      <Link>device headers\acc.h</Link>
+    </Compile>
+    <Compile Include="..\CMSIS\CMSIS_Devices\ATMEL\sam4s\include\component\adc.h">
+      <SubType>compile</SubType>
+      <Link>device headers\adc.h</Link>
+    </Compile>
+    <Compile Include="..\CMSIS\CMSIS_Devices\ATMEL\sam4s\include\component\chipid.h">
+      <SubType>compile</SubType>
+      <Link>device headers\chipid.h</Link>
+    </Compile>
+    <Compile Include="..\CMSIS\CMSIS_Devices\ATMEL\sam4s\include\component\cmcc.h">
+      <SubType>compile</SubType>
+      <Link>device headers\cmcc.h</Link>
+    </Compile>
+    <Compile Include="..\CMSIS\CMSIS_Devices\ATMEL\sam4s\include\component\crccu.h">
+      <SubType>compile</SubType>
+      <Link>device headers\crccu.h</Link>
+    </Compile>
+    <Compile Include="..\CMSIS\CMSIS_Devices\ATMEL\sam4s\include\component\dacc.h">
+      <SubType>compile</SubType>
+      <Link>device headers\dacc.h</Link>
+    </Compile>
+    <Compile Include="..\CMSIS\CMSIS_Devices\ATMEL\sam4s\include\component\efc.h">
+      <SubType>compile</SubType>
+      <Link>device headers\efc.h</Link>
+    </Compile>
+    <Compile Include="..\CMSIS\CMSIS_Devices\ATMEL\sam4s\include\component\gpbr.h">
+      <SubType>compile</SubType>
+      <Link>device headers\gpbr.h</Link>
+    </Compile>
+    <Compile Include="..\CMSIS\CMSIS_Devices\ATMEL\sam4s\include\component\hsmci.h">
+      <SubType>compile</SubType>
+      <Link>device headers\hsmci.h</Link>
+    </Compile>
+    <Compile Include="..\CMSIS\CMSIS_Devices\ATMEL\sam4s\include\component\matrix.h">
+      <SubType>compile</SubType>
+      <Link>device headers\matrix.h</Link>
+    </Compile>
+    <Compile Include="..\CMSIS\CMSIS_Devices\ATMEL\sam4s\include\component\pdc.h">
+      <SubType>compile</SubType>
+      <Link>device headers\pdc.h</Link>
+    </Compile>
+    <Compile Include="..\CMSIS\CMSIS_Devices\ATMEL\sam4s\include\component\pio.h">
+      <SubType>compile</SubType>
+      <Link>device headers\pio.h</Link>
+    </Compile>
+    <Compile Include="..\CMSIS\CMSIS_Devices\ATMEL\sam4s\include\component\pmc.h">
+      <SubType>compile</SubType>
+      <Link>device headers\pmc.h</Link>
+    </Compile>
+    <Compile Include="..\CMSIS\CMSIS_Devices\ATMEL\sam4s\include\component\pwm.h">
+      <SubType>compile</SubType>
+      <Link>device headers\pwm.h</Link>
+    </Compile>
+    <Compile Include="..\CMSIS\CMSIS_Devices\ATMEL\sam4s\include\component\rstc.h">
+      <SubType>compile</SubType>
+      <Link>device headers\rstc.h</Link>
+    </Compile>
+    <Compile Include="..\CMSIS\CMSIS_Devices\ATMEL\sam4s\include\component\rtc.h">
+      <SubType>compile</SubType>
+      <Link>device headers\rtc.h</Link>
+    </Compile>
+    <Compile Include="..\CMSIS\CMSIS_Devices\ATMEL\sam4s\include\component\rtt.h">
+      <SubType>compile</SubType>
+      <Link>device headers\rtt.h</Link>
+    </Compile>
+    <Compile Include="..\CMSIS\CMSIS_Devices\ATMEL\sam4s\include\component\smc.h">
+      <SubType>compile</SubType>
+      <Link>device headers\smc.h</Link>
+    </Compile>
+    <Compile Include="..\CMSIS\CMSIS_Devices\ATMEL\sam4s\include\component\spi.h">
+      <SubType>compile</SubType>
+      <Link>device headers\spi.h</Link>
+    </Compile>
+    <Compile Include="..\CMSIS\CMSIS_Devices\ATMEL\sam4s\include\component\ssc.h">
+      <SubType>compile</SubType>
+      <Link>device headers\ssc.h</Link>
+    </Compile>
+    <Compile Include="..\CMSIS\CMSIS_Devices\ATMEL\sam4s\include\component\supc.h">
+      <SubType>compile</SubType>
+      <Link>device headers\supc.h</Link>
+    </Compile>
+    <Compile Include="..\CMSIS\CMSIS_Devices\ATMEL\sam4s\include\component\tc.h">
+      <SubType>compile</SubType>
+      <Link>device headers\tc.h</Link>
+    </Compile>
+    <Compile Include="..\CMSIS\CMSIS_Devices\ATMEL\sam4s\include\component\twi.h">
+      <SubType>compile</SubType>
+      <Link>device headers\twi.h</Link>
+    </Compile>
+    <Compile Include="..\CMSIS\CMSIS_Devices\ATMEL\sam4s\include\component\uart.h">
+      <SubType>compile</SubType>
+      <Link>device headers\uart.h</Link>
+    </Compile>
+    <Compile Include="..\CMSIS\CMSIS_Devices\ATMEL\sam4s\include\component\usart.h">
+      <SubType>compile</SubType>
+      <Link>device headers\usart.h</Link>
+    </Compile>
+    <Compile Include="..\CMSIS\CMSIS_Devices\ATMEL\sam4s\include\component\usbdev.h">
+      <SubType>compile</SubType>
+      <Link>device headers\usbdev.h</Link>
+    </Compile>
+    <Compile Include="..\CMSIS\CMSIS_Devices\ATMEL\sam4s\include\component\wdt.h">
+      <SubType>compile</SubType>
+      <Link>device headers\wdt.h</Link>
+    </Compile>
+    <Compile Include="..\CMSIS\CMSIS_Devices\ATMEL\sam4s\include\pio\sam4s16c.h">
+      <SubType>compile</SubType>
+      <Link>device headers\sam4s16c.h</Link>
+    </Compile>
+    <Compile Include="..\CMSIS\CMSIS_Devices\ATMEL\sam4s\include\sam4s16c.h">
+      <SubType>compile</SubType>
+      <Link>device headers\sam4s16c.h</Link>
+    </Compile>
+    <Compile Include="ex6_serial_print.c">
+      <SubType>compile</SubType>
+      <Link>ex6_serial_print.c</Link>
+    </Compile>
+    <Compile Include="..\resources\startup_code\startup_sam4s.c">
+      <SubType>compile</SubType>
+      <Link>startup_sam4s.c</Link>
+    </Compile>
+    <Compile Include="..\resources\startup_code\system_sam4s_120MHz.c">
+      <SubType>compile</SubType>
+      <Link>system_sam4s_120MHz.c</Link>
+    </Compile>
+    <Compile Include="..\resources\startup_code\system_sam4s.h">
+      <SubType>compile</SubType>
+      <Link>system_sam4s.h</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\resources\linker_scripts\gcc\atmel_sam4s_ek.ld">
+      <SubType>compile</SubType>
+      <Link>atmel_sam4s_ek.ld</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="device headers" />
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>

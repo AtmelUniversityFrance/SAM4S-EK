@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "ex1_basic_led", "ex1_basic_led\ex1_basic_led.cproj", "{03433BB5-01C7-4ED8-87B6-B67AF79A71A5}"
+EndProject
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "ex2_basic_button", "ex2_basic_button\ex2_basic_button.cproj", "{9E5CC2AF-4FCF-4B22-8422-2B6D767EFDAF}"
+EndProject
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "ex3_advanced_button", "ex3_advanced_button\ex3_advanced_button.cproj", "{E53F186C-47D8-4DA9-B5D5-2EA1B0A7B2E0}"
+EndProject
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "ex4_led_blink", "ex4_led_blink\ex4_led_blink.cproj", "{3F196FF3-1E80-4221-AACE-557BBB26DA8B}"
+EndProject
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "ex5_clocks", "ex5_clocks\ex5_clocks.cproj", "{87722A1A-BDA5-4835-B4A3-C2E4027D6412}"
+EndProject
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "ex6_serial_print", "ex6_serial_print\ex6_serial_print.cproj", "{72372197-A450-43E7-9888-F1E9BD2537B4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Release|ARM = Release|ARM
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{03433BB5-01C7-4ED8-87B6-B67AF79A71A5}.Debug|ARM.ActiveCfg = Debug|ARM
+		{03433BB5-01C7-4ED8-87B6-B67AF79A71A5}.Debug|ARM.Build.0 = Debug|ARM
+		{03433BB5-01C7-4ED8-87B6-B67AF79A71A5}.Release|ARM.ActiveCfg = Release|ARM
+		{03433BB5-01C7-4ED8-87B6-B67AF79A71A5}.Release|ARM.Build.0 = Release|ARM
+		{9E5CC2AF-4FCF-4B22-8422-2B6D767EFDAF}.Debug|ARM.ActiveCfg = Debug|ARM
+		{9E5CC2AF-4FCF-4B22-8422-2B6D767EFDAF}.Debug|ARM.Build.0 = Debug|ARM
+		{9E5CC2AF-4FCF-4B22-8422-2B6D767EFDAF}.Release|ARM.ActiveCfg = Release|ARM
+		{9E5CC2AF-4FCF-4B22-8422-2B6D767EFDAF}.Release|ARM.Build.0 = Release|ARM
+		{E53F186C-47D8-4DA9-B5D5-2EA1B0A7B2E0}.Debug|ARM.ActiveCfg = Debug|ARM
+		{E53F186C-47D8-4DA9-B5D5-2EA1B0A7B2E0}.Debug|ARM.Build.0 = Debug|ARM
+		{E53F186C-47D8-4DA9-B5D5-2EA1B0A7B2E0}.Release|ARM.ActiveCfg = Release|ARM
+		{E53F186C-47D8-4DA9-B5D5-2EA1B0A7B2E0}.Release|ARM.Build.0 = Release|ARM
+		{3F196FF3-1E80-4221-AACE-557BBB26DA8B}.Debug|ARM.ActiveCfg = Debug|ARM
+		{3F196FF3-1E80-4221-AACE-557BBB26DA8B}.Debug|ARM.Build.0 = Debug|ARM
+		{3F196FF3-1E80-4221-AACE-557BBB26DA8B}.Release|ARM.ActiveCfg = Release|ARM
+		{3F196FF3-1E80-4221-AACE-557BBB26DA8B}.Release|ARM.Build.0 = Release|ARM
+		{87722A1A-BDA5-4835-B4A3-C2E4027D6412}.Debug|ARM.ActiveCfg = Debug|ARM
+		{87722A1A-BDA5-4835-B4A3-C2E4027D6412}.Debug|ARM.Build.0 = Debug|ARM
+		{87722A1A-BDA5-4835-B4A3-C2E4027D6412}.Release|ARM.ActiveCfg = Release|ARM
+		{87722A1A-BDA5-4835-B4A3-C2E4027D6412}.Release|ARM.Build.0 = Release|ARM
+		{72372197-A450-43E7-9888-F1E9BD2537B4}.Debug|ARM.ActiveCfg = Debug|ARM
+		{72372197-A450-43E7-9888-F1E9BD2537B4}.Debug|ARM.Build.0 = Debug|ARM
+		{72372197-A450-43E7-9888-F1E9BD2537B4}.Release|ARM.ActiveCfg = Release|ARM
+		{72372197-A450-43E7-9888-F1E9BD2537B4}.Release|ARM.Build.0 = Release|ARM
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
